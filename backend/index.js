@@ -13,6 +13,8 @@ mongoose.connect(process.env.MONGO_URI)
     console.log(err)
 })
 
+app.use(require('./routes/productRoute'))
+
 app.listen(process.env.PORT,()=>{
     console.log('server running on port'+process.env.PORT)
 })
